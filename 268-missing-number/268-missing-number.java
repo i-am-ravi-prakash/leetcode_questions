@@ -1,13 +1,23 @@
 class Solution {
-    public int missingNumber(int[] nums) {
-        int len = nums.length;
-        int idealSum = len*(len + 1)/2;
-        int currSum = 0;
+    public int missingNumber(int[] arr) {
+        int missingNum = -1;
+        int len = arr.length;
+        Arrays.sort(arr);
         
-        for(int i = 0; i < len; i++){
-            currSum += nums[i];
+        if(arr[len - 1] != len){
+            return len;
+        }
+        else if(arr[0] != 0){
+            return 0;
         }
         
-        return idealSum - currSum;
+        for(int i = 0; i < len - 1; i++){
+            if(arr[i + 1] - arr[i] != 1){
+                missingNum = arr[i] + 1;
+                break;
+            }
+        }
+        
+        return missingNum;
     }
 }
