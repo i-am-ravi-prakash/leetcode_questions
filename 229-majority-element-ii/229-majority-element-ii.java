@@ -12,13 +12,13 @@ class Solution {
                 map.put(nums[i], (map.get(nums[i]) + 1));
             }
         }
-        
-        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
-            if(entry.getValue() > (len/3)){
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > (len / 3)) {
                 result.add(entry.getKey());
             }
         }
-        
+
         return result;
     }
 }
