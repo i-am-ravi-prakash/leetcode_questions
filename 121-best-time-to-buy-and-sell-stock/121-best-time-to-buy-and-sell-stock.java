@@ -4,18 +4,16 @@ class Solution {
         int len = prices.length;
         int maxProfit = 0;
         int profit = 0;
+        int minPrice = prices[0];
 
-        Stack<Integer> stack = new Stack<>();
+        for (int i = 1; i < len; i++) {
+            int currPrice = prices[i];
 
-        for (int i = len - 1; i >= 0; i--) {
-            if (stack.isEmpty() || prices[i] >= stack.peek()) {
-                stack.push(prices[i]);
+            if (currPrice > minPrice) {
+                profit = currPrice - minPrice;
+                maxProfit = Math.max(maxProfit, profit);
             } else {
-                profit = stack.peek() - prices[i];
-
-                if (profit > maxProfit) {
-                    maxProfit = profit;
-                }
+                minPrice = currPrice;
             }
         }
 
