@@ -9,24 +9,23 @@
  * }
  */
 class Solution {
-    
-    public ListNode removeNthNodeFromBeginning(ListNode head, int N){
-        if(N == 1){
+
+    public ListNode removeNthNodeFromBeginning(ListNode head, int N) {
+        if (N == 1) {
             return head.next;
-        }
-        else{
+        } else {
             ListNode prev = null;
             ListNode curr = head;
             int count = 1;
-            
-            while(count < N){
+
+            while (count < N) {
                 prev = curr;
                 curr = curr.next;
                 count++;
             }
-            
+
             prev.next = curr.next;
-            
+
             return head;
         }
     }
@@ -41,7 +40,7 @@ class Solution {
         }
         temp = head;
         int tempLen = (listLen - n + 1);
-        
+
         head = removeNthNodeFromBeginning(head, tempLen);
 
         return head;
