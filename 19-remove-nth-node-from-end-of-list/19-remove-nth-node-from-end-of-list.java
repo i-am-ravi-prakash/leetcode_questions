@@ -38,10 +38,8 @@ class Solution {
             temp = temp.next;
             listLen++;
         }
-        temp = head;
-        int tempLen = (listLen - n + 1);
 
-        head = removeNthNodeFromBeginning(head, tempLen);
+        head = removeNthNodeFromBeginning(head, listLen - n + 1);
 
         return head;
     }
