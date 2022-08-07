@@ -10,7 +10,7 @@ class Solution {
             }
         }
 
-        lastUniqueIndex++;
-        return lastUniqueIndex;
+        //lastUniqueIndex++;
+        return ++lastUniqueIndex;
     }
 }
