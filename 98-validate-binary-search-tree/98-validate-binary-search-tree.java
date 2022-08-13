@@ -14,30 +14,29 @@
  * }
  */
 class Solution {
+
     public boolean isValidBST(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         boolean isBST = true;
-        
+
         inorderTraversal(root, list);
-        
+
         int size = list.size();
-        
-        for(int i = 0; i < (size - 1); i++){
-            if(list.get(i) >= list.get(i + 1)){
+
+        for (int i = 0; i < (size - 1); i++) {
+            if (list.get(i) >= list.get(i + 1)) {
                 isBST = false;
                 break;
             }
         }
-        
+
         return isBST;
     }
-    
-    public void inorderTraversal(TreeNode root, List<Integer> list){
-        if(root == null)
-            return;
+
+    public void inorderTraversal(TreeNode root, List<Integer> list) {
+        if (root == null) return;
         inorderTraversal(root.left, list);
         list.add(root.val);
         inorderTraversal(root.right, list);
-        
     }
 }
