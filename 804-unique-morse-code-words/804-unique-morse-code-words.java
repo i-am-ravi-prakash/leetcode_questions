@@ -30,7 +30,6 @@ class Solution {
             "--.."
         };
         Set<String> set = new HashSet<String>();
-        int wordLen = words.length;
 
         for (String currWord : words) {
             int currWordLen = currWord.length();
