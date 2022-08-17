@@ -40,8 +40,6 @@ class Solution {
             set.add(currWordMorseCode);
         }
 
-        int uniqueTransformations = set.size();
-
-        return uniqueTransformations;
+        return set.size();
     }
 }
