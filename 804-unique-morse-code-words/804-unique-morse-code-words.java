@@ -32,12 +32,11 @@ class Solution {
         Set<String> set = new HashSet<String>();
         int wordLen = words.length;
 
-        for (int i = 0; i < wordLen; i++) {
-            String currWord = words[i];
+        for (String currWord : words) {
             int currWordLen = currWord.length();
             String currWordMorseCode = "";
             for (int j = 0; j < currWordLen; j++) {
-                currWordMorseCode = currWordMorseCode + morseCode[currWord.charAt(j) - 'a'];
+                currWordMorseCode += morseCode[currWord.charAt(j) - 'a'];
             }
             set.add(currWordMorseCode);
         }
