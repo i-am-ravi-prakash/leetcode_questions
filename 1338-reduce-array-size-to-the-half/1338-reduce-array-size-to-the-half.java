@@ -3,14 +3,9 @@ class Solution {
     public int minSetSize(int[] arr) {
         int len = arr.length;
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-
-        for (int i = 0; i < len; i++) {
-            int currEle = arr[i];
-            if (!map.containsKey(currEle)) {
-                map.put(currEle, 1);
-            } else {
-                map.put(currEle, (map.get(currEle)) + 1);
-            }
+        
+        for(int num : arr){
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
         int[] tempArr = new int[map.size()];
