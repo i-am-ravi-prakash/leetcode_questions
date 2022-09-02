@@ -34,11 +34,11 @@ class Solution {
             totalSum += num;
         }
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; sum += nums[i++]) {
             if (sum * 2 == totalSum - nums[i]) {
                 return i;
             }
-            sum += nums[i];
+            //sum += nums[i];
         }
         return -1;
     }
