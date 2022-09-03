@@ -7,9 +7,14 @@ class Solution {
         int maxProfit = 0;
 
         for (int i = 1; i < len; i++) {
-            minPrice = Math.min(minPrice, prices[i]);
-            profit = prices[i] - minPrice;
-            maxProfit = Math.max(maxProfit, profit);
+            int currPrice = prices[i];
+
+            if (currPrice > minPrice) {
+                profit = currPrice - minPrice;
+                maxProfit = Math.max(profit, maxProfit);
+            } else {
+                minPrice = currPrice;
+            }
         }
 
         return maxProfit;
