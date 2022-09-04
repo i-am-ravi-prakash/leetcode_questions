@@ -6,13 +6,12 @@ class Solution {
         int maxSum = nums[0];
 
         for (int i = 0; i < len; i++) {
-            sum += nums[i];
-
-            maxSum = Math.max(maxSum, sum);
-
             if (sum < 0) {
                 sum = 0;
             }
+
+            sum += nums[i];
+            maxSum = Math.max(maxSum, sum);
         }
 
         return maxSum;
