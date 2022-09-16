@@ -10,27 +10,13 @@ class Solution {
         while (i >= 0) {
             curr = s.charAt(i);
             if (curr == ' ') {
-                if (curr == prev) {
-                    i--;
-                } else {
-                    break;
-                }
+                if (curr == prev) i--; else break;
             } else {
                 lastWordLength++;
                 i--;
             }
             prev = curr;
         }
-
-        /**
-        for (int i = len - 1; i >= 0; i--) {
-            if (s.charAt(i) != ' ') {
-                lastWordLength++;
-            } else if (i != len - 1 && s.charAt(i) == ' ') {
-                break;
-            }
-        }
-        */
 
         return lastWordLength;
     }
