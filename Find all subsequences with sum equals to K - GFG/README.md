@@ -1,4 +1,4 @@
-## Given an array arr[] of length N and a number K, the task is to find all the subsequences of the array whose sum of elements is K.
+[Given an array arr[] of length N and a number K, the task is to find all the subsequences of the array whose sum of elements is K.](https://www.geeksforgeeks.org/find-all-subsequences-with-sum-equals-to-k/)
 
 **Examples:**
 
