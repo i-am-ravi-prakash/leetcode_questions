@@ -37,6 +37,6 @@ You are required to complete two methods push() and pop(). The push() method tak
 **Expected Auixilliary Space :** O(1) for both **push()** and **pop()**.
 
 **Constraints:**
-1 <= Q <= 100
 
+1 <= Q <= 100
 1 <= x <= 100
