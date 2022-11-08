@@ -38,4 +38,5 @@ You are required to complete two methods push() and pop(). The push() method tak
 
 **Constraints:**
 1 <= Q <= 100
+
 1 <= x <= 100
